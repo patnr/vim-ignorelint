@@ -16,7 +16,7 @@ You might use this:
 
 ```python
 try:
-    __IPYTHON__    # <-- Linting warning produced here
+    __IPYTHON__    # <-- Linter complains here
     is_ipython = True
 except NameError:
     is_ipython = False
@@ -31,7 +31,7 @@ Mappings
 --------
 
 The default mapping is `<leader>ig`
-Define your own mapping using
+Define your own mapping as in the following example:
 
 ```vim
 nmap <C-i> <plug>(ignorelint-toggle)
