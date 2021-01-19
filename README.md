@@ -25,7 +25,7 @@ except NameError:
 If you're using "pyright" within vim (using "ALE" or "coc.nvim")
 it might complain that `__IPYTHON__` is not defined.
 So you want to add the tag `# type: ignore` to the end of that line.
-Go to the line in question, press your keyboard shorcut.
+Go to the line in question, press your keyboard shortcut.
 
 Mappings
 --------
