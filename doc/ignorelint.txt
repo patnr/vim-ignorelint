@@ -2,7 +2,7 @@
 
         Ignore annoyances!~
 
-Author:  Patric Nima Raanes
+Author:  Patric N. Raanes
 License: MIT
 
 =============================================================================
@@ -30,7 +30,7 @@ Example: Suppose you want to know if a python program is running within IPython.
 You might use this: >
 
     try:
-        __IPYTHON__    <-- Linting warning produced here
+        __IPYTHON__    # <-- Linter complains here
         is_ipython = True
     except NameError:
         is_ipython = False
@@ -44,7 +44,7 @@ Go to the line in question, press your keyboard shorcut.
 3. Mappings                                       *IgnoreLintMappings*
 
 The default mapping is `<leader>ig`
-Define your own mapping using
+Define your own mapping as in the following example:
 >
     nmap <C-i> <plug>(ignorelint-toggle)
 >
