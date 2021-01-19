@@ -13,7 +13,7 @@ function! ToggleLintIgnore()
     call s:DefaultVars()
     let s:tag = b:ignore_lint_label
 
-	let line = getline(".")
+    let line = getline(".")
     if stridx(line, b:ignore_lint_label) >= 0
         " Rm tag
         let line2 = substitute(line, '\s*' . s:tag, "", "")
@@ -46,6 +46,7 @@ function! s:GetVar(name, default)
   end
 endfunction
 
+" Init option
 function! InitVariable(var, value)
     if !exists(a:var)
         execute 'let ' . a:var . ' = ' . "'" . a:value . "'"
@@ -62,8 +63,8 @@ endfunction
 " Define plug-map
 nnoremap <silent><plug>(ignorelint-toggle) :call ToggleLintIgnore()<cr>
 
+" Define default mappings?
 call InitVariable("g:ignorelint_default_mappings", 1)
-
 if g:ignorelint_default_mappings
     nmap <leader>ig <plug>(ignorelint-toggle)
 endif
